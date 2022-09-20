@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Program</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus suscipit impedit mollitia corporis soluta repellendus, temporibus at odio sint inventore, labore aspernatur saepe voluptates enim omnis quisquam fugiat. Repudiandae, excepturi!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus suscipit impedit mollitia corporis soluta repellendus, temporibus at odio sint inventore, labore aspernatur saepe voluptates enim omnis quisquam fugiat. Repudiandae, excepturi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus suscipit impedit mollitia corporis soluta repellendus, temporibus at odio sint inventore, labore aspernatur saepe voluptates enim omnis quisquam fugiat. Repudiandae, excepturi!</p>
+
+    <script>
+        /*
+        ALGUNS TIPOS DE WINDOW.
+        window.alert("Minha primeira mensagem em JS");
+        window.confirm("Está gostando de JS ?");
+        window.prompt("Qual é o seu nome ?");
+        */
+
+        /*
+        TIPO DE CONVERÇÃO DIRETO NA VARIÁVEL
+        var n1 = Number(window.prompt("Digite o valor de n1: "));
+        var n2 = Number.parseInt(window.prompt("Digite o valor de n2: "));
+        */
+        var n1 = window.prompt("Digite o valor de n1: ");
+        var n2 = window.prompt("Digite o valor de n2: ")
+
+        /*
+        CONVERÇÃO DIRETO NO RESULTADO
+        var soma = window.alert("A soma de n1 + n2 é igual a: " + (Number.parseInt(n1) + Number.parseInt(n2)));
+        */
+        var soma = Number(n1) + Number(n2) 
+        window.alert("A soma de n1 + n2 = " + soma);
+
+        var nome = window.prompt("Digite seu nome: ")
+        var idade = window.prompt("Digite sua idade: ")
+
+        /*Formatação usando PlaHolder*/
+        var rsp = window.alert(`O aluno ${nome} de ${idade} anos, obteve o resultado de ${soma} na conta`)
+    </script>
+</body>
+</html>

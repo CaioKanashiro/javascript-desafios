@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> KM/h
+        <input type="button" value="Verificar" onclick="calcular()">
+    </p>
+    <div id="resultado"></div>
+
+    <p>
+        De que país você é: <input type="text" name="txttext" id="txttext">
+        <input type="button" value="Analisar" onclick="analisar()">
+    </p>
+    <div id="resposta"></div>
+
+    <script>
+        function calcular(){
+            var txtvel = document.getElementById('txtvel')
+            var resultado = document.getElementById('resultado')
+            var velocidade = Number(txtvel.value)
+            resultado.innerText = `Sua velocidade é de ${velocidade}Km/h `
+
+            if(velocidade > 60){
+                resultado.innerHTML += `Você foi Multado !`
+            }else{
+                resultado.innerHTML += "Boa viagem!"
+            }
+        }
+
+        function analisar(){
+            var txttext = document.getElementById('txttext')
+            var resposta = document.getElementById('resposta')
+            resposta.innerText = `Voceeê é do ${txttext}`
+
+            if(txttext == "Brasil"){
+                resposta.innerHTML = `Então é Brasileiro! `
+
+            }else{
+                resposta.innerHTML = `Então é Estrangeiro! `
+            }
+        }
+    </script>
+</body>
+</html>
